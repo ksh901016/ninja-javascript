@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<div id="a">삭제1</div>
+		<div id="b">삭제2</div>
+	</body>
+	<script type="text/javascript">
+		HTMLElement.prototype.remove = function(){
+			if(this.parentNode){
+				this.parentNode.removeChild(this);
+			}
+		}
+
+		//var a = document.getElementById("a");
+		//a.parentNode.removeChild(a);
+
+		document.getElementById("b").remove();
+
+	</script>
+</html>
